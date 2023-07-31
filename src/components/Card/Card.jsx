@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({imgItem, content}) {
+function Card({imgItem, content,name}) {
   return (
     <section className="mx-auto w-fit p-12">
       <div className="w-72 h-full group">
@@ -14,6 +14,7 @@ function Card({imgItem, content}) {
             <p>{content}</p>
           </div>
         </div>
+        <p className="">{name}</p>
       </div>
     </section>
   );

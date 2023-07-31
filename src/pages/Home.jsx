@@ -1,10 +1,14 @@
 import React from "react";
 import Cards from "../components/Cards/Cards";
 
-function Home() {
+
+
+function Home({allcharacters}) {
+  
+  console.log("hola soy home",allcharacters);
   return (
-    <div>
-      <Cards/>
+    <div className='bg-hero-pattern h-screen '>
+      <Cards characters={allcharacters}/>
     </div>
   );
 }
