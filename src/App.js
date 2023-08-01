@@ -7,7 +7,6 @@ import axios from "axios";
 function App() {
   const [characters, setCharacters] = useState([]);
 
-
   async function getAllCharacters() {
     const allData = await axios.get(
       "https://akabab.github.io/starwars-api/api/all.json"
@@ -18,8 +17,8 @@ function App() {
 
   useEffect(() => {
     getAllCharacters()
-    console.log(characters)
   }, []);
+  
 
   const [chars, setChars] = useState({
     cardLeft: {},
@@ -31,7 +30,7 @@ function App() {
       c.name.toLowerCase().includes(name.toLowerCase())
     );
     if (cardLocation === "left" && findCharacter) setChars({ ...chars, cardLeft: findCharacter });
-    if (cardLocation === "rigth" && findCharacter)
+    if (cardLocation === "right" && findCharacter)
       setChars({ ...chars, cardRight: findCharacter });
   }
 

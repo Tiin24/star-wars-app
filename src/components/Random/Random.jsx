@@ -2,7 +2,6 @@ import React from 'react'
 import {BsArrowClockwise} from 'react-icons/bs'
 
 function Random({random,cardLocation}) {
-  console.log(random)
   return (
     <div>
       <button

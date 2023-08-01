@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { getAllCharacters } from "../../hooks/DataRes";
 
 function Search({ cardLocation, search }) {
   const [input, setInput] = useState("");

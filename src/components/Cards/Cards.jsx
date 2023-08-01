@@ -4,17 +4,27 @@ import Card from "../Card/Card";
 function Cards({ characters }) {
   const left = characters.cardLeft;
   const right = characters.cardRight;
-  console.log( right);
   return (
-    <div className="flex">
+    <div className="flex text-center items-center">
       <Card
-        imgItem={left.image}
-        content={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, omnis. Hic, ad tempore voluptatem sequi quae obcaecati eum facilis deserunt pariatur voluptatibus laborum voluptas excepturi adipisci omnis perferendis quas fuga."
-        }
+        imgItem={left.image ? left.image : "https://yt3.googleusercontent.com/ytc/AOPolaT-60EgZMPStubu7XcNrZ9useOeTtyB-_yVsWvsAQ=s900-c-k-c0x00ffffff-no-rj"}
         name={left.name}
+        id={left.id}
+        specie={left.species}
+        home={left.homeworld}
+        afiliation={left.affiliations ? left.affiliations[0] : ""}
+        shadowClass="shadow-custom-shadow-blue"
       />
-      <Card imgItem={right.image} name={right.name}/>
+      <h1 className='font-custom text-8xl text-yellow-500'>VS</h1>
+      <Card
+        imgItem={right.image ? right.image : "https://yt3.googleusercontent.com/ytc/AOPolaT-60EgZMPStubu7XcNrZ9useOeTtyB-_yVsWvsAQ=s900-c-k-c0x00ffffff-no-rj"}
+        name={right.name}
+        id={right.id}
+        specie={right.species}
+        home={right.homeworld}
+        afiliation={right.affiliations ? right.affiliations[0] : ""}
+        shadowClass="shadow-custom-shadow-red"
+      />
     </div>
   );
 }
