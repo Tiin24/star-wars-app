@@ -12,13 +12,12 @@ function App() {
       "https://akabab.github.io/starwars-api/api/all.json"
     );
     // console.log(allData);
-    setCharacters(allData.data)
+    setCharacters(allData.data);
   }
 
   useEffect(() => {
-    getAllCharacters()
+    getAllCharacters();
   }, []);
-  
 
   const [chars, setChars] = useState({
     cardLeft: {},
@@ -29,7 +28,8 @@ function App() {
     const findCharacter = characters.find((c) =>
       c.name.toLowerCase().includes(name.toLowerCase())
     );
-    if (cardLocation === "left" && findCharacter) setChars({ ...chars, cardLeft: findCharacter });
+    if (cardLocation === "left" && findCharacter)
+      setChars({ ...chars, cardLeft: findCharacter });
     if (cardLocation === "right" && findCharacter)
       setChars({ ...chars, cardRight: findCharacter });
   }

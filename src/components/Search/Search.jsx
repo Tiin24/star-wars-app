@@ -5,7 +5,6 @@ function Search({ cardLocation, search }) {
 
   const handleChange = (e) => {
     setInput(e.target.value);
-    console.log(input);
   };
 
   return (

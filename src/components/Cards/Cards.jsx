@@ -7,7 +7,11 @@ function Cards({ characters }) {
   return (
     <div className="flex text-center items-center">
       <Card
-        imgItem={left.image ? left.image : "https://yt3.googleusercontent.com/ytc/AOPolaT-60EgZMPStubu7XcNrZ9useOeTtyB-_yVsWvsAQ=s900-c-k-c0x00ffffff-no-rj"}
+        imgItem={
+          left.image
+            ? left.image
+            : "https://yt3.googleusercontent.com/ytc/AOPolaT-60EgZMPStubu7XcNrZ9useOeTtyB-_yVsWvsAQ=s900-c-k-c0x00ffffff-no-rj"
+        }
         name={left.name}
         id={left.id}
         specie={left.species}
@@ -15,9 +19,13 @@ function Cards({ characters }) {
         afiliation={left.affiliations ? left.affiliations[0] : ""}
         shadowClass="shadow-custom-shadow-blue"
       />
-      <h1 className='font-custom text-8xl text-yellow-500'>VS</h1>
+      <h1 className="font-custom text-8xl text-yellow-500">VS</h1>
       <Card
-        imgItem={right.image ? right.image : "https://yt3.googleusercontent.com/ytc/AOPolaT-60EgZMPStubu7XcNrZ9useOeTtyB-_yVsWvsAQ=s900-c-k-c0x00ffffff-no-rj"}
+        imgItem={
+          right.image
+            ? right.image
+            : "https://yt3.googleusercontent.com/ytc/AOPolaT-60EgZMPStubu7XcNrZ9useOeTtyB-_yVsWvsAQ=s900-c-k-c0x00ffffff-no-rj"
+        }
         name={right.name}
         id={right.id}
         specie={right.species}
